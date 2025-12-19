@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
@@ -15,10 +16,12 @@ st.write("Model: **Random Forest Regression**")
 # ============================================
 # 2. LOAD DATASET
 # ============================================
+DATA_PATH = "Life Expectancy Data.csv"
+
 @st.cache_data
 
 def load_data():
-    return pd.read_csv("Life Expectancy Data.csv", sep=';', engine='python', encoding='latin1', na_values=['NA', '?'])
+    return pd.read_csv(DATA_PATH, sep=';', engine='python', encoding='latin1', na_values=['NA', '?'])
 
 df = load_data()
 
