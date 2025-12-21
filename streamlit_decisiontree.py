@@ -11,7 +11,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 # Title
 # ===============================
 st.title("Life Expectancy Regression App")
-st.write("Menggunakan Decision Tree Regression dengan dataset WHO Life Expectancy.")
+st.write("Model: **Lasso Regression**")
 
 # ===============================
 # Load Dataset
